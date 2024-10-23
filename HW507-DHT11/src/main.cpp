@@ -85,8 +85,8 @@ String getTime() {
   client.setInsecure();
   HTTPClient https;
   String zone = getZone();
-  String URL = "https://timeapi.io/api/time/current/zone?timeZone=America%2FNew_York";
-  // America%2FLos_Angeles
+  String URL = "https://timeapi.io/api/time/current/zone?timeZone=";
+  URL = URL + zone;
   if(https.begin(client, URL)){
     int HTTPCode = https.GET();
     if(HTTPCode > 0){
