@@ -1,31 +1,18 @@
 /*
 * ----------------------------------------------
-* Project/Program Name : HW507-DHT11 Sensor Node
+* Project/Program Name : ButtonPUT
 * File Name : main.cpp
 * Author : Diego King
-* Date : 10/22/2024
+* Date : 10/30/2024
 * Version : v2.0
 *
 * Purpose:
-* ESP8266 connects to hard-coded SSID to:
-*   Acquire timezone from webserver
-*   Acquire time from timeAPI
-*   Send Data with time to database
+* Sends HTTP request to get LED status (on or off) at the push of a button.
 *
-* Inputs:
-*   Hardcoded parameters: WiFi credentials, webserver URL for posting data to database
-*
-* Outputs:
-*   None
 *
 * Example Application:
-*   Used as a remote node which monitors temperature and humidity and is able to send it to a webserver based database.
+*   Used as a remote control for any larger node.
 *
-* Dependencies:
-*   include\ArduinoJson-v6.21.5.h
-*
-* 
-* 
 *
 * ---------------------------------------------------------------------------
 */
@@ -36,8 +23,8 @@
 
 String sendHTTP(String URL);
 bool readButton();
-const char* ssid = "NETGEAR53"; //Enter SSID
-const char* password = "jaggedink965"; //Enter Password
+const char* ssid = "iPhone 190"; //Enter SSID
+const char* password = "myhotspot"; //Enter Password
 String myURL = "http://67.169.107.53/results.txt";
 
 void setup() {
