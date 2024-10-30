@@ -29,8 +29,8 @@ String sendHTTP(String URL);
 DynamicJsonDocument parseJSON(String json);
 void setLED(int pinR, int pinG, int pinB, int rcolor, int gcolor, int bcolor);
 bool readButton();
-const char* ssid = "NETGEAR53"; //Enter SSID
-const char* password = "jaggedink965"; //Enter Password
+const char* ssid = "iPhone 190"; //Enter SSID
+const char* password = "myhotspot"; //Enter Password
 String myURL = "http://67.169.107.53/RGBresults.txt";
 String myURL2 = "http://67.169.107.53/results.txt";
 const int PIN_BLUE1 = D5;
