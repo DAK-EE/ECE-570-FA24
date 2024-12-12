@@ -1,3 +1,16 @@
+//Author: Diego King
+//Date: 12/10/2024
+//Description: This code is used to publish analog data on pin A0 to an MQTT Topic. It also monitors a topic for the string LED ON and LED OFF, which controls an LED via GPIO. 
+//The published message is formatted as a JSON which looks something like:
+//{
+//   "status": [
+//    {
+//      "LED": "0",
+//      "ADC": "566"
+//    }
+//  ]
+//}
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
@@ -22,8 +35,8 @@ const int PIN_BOARD_LED2 = D0;
 const int PIN_POT = A0;
 
 // WiFi variables
-const char* ssid = "NETGEAR53";
-const char* password = "jaggedink965";
+const char* ssid = "yournetwork";
+const char* password = "yourpassword";
 
 // MQTT variables
 // const char* port = "1883";
