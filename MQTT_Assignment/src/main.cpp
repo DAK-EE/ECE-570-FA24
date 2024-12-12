@@ -16,7 +16,6 @@
 #include <ESP8266HTTPClient.h>
 #include <PubSubClient.h>
 
-// put function declarations here:
 void setLED(int pinR, int pinG, int pinB, int rcolor, int gcolor, int bcolor);
 bool pollButton();
 int pollADC();
@@ -24,7 +23,6 @@ void setupWifi();
 void callback(char* topic, byte* payload, int length);
 void reconnect();
 String getStatusJSON();
-// char* intToStr(int num);
 
 const int PIN_BLUE = D2;
 const int PIN_GREEN = D5;
@@ -39,7 +37,6 @@ const char* ssid = "yournetwork";
 const char* password = "yourpassword";
 
 // MQTT variables
-// const char* port = "1883";
 const char* mqtt_server = "broker.hivemq.com";
 const char* publishTopic = "myesp/testing/room"; //output topic where the esp publishes
 const char* subscribeTopic = "myesp/testing/room";
