@@ -8,7 +8,7 @@ subscribe_topic = "myesp/testing/room"
 
 db_host = "localhost"
 db_user = "DiegoKing"
-db_pass = "6161"
+db_pass = "****"
 db_database = "db_DiegoKing"
 
 def on_connect(client, userdata, flags,rc):
