@@ -1,3 +1,10 @@
+#Author: Diego King
+#Date: 12/10/2024
+#Description: This program listens to a subscribed MQTT topic and prints the received message.
+#If the message is a JSON it tries to parse it then push it to a mysql database. In this case
+#the device running the python script happens to be the same device hosting the database (hence
+#db_host = "localhost").
+
 import paho.mqtt.client as mqtt
 import mysql.connector
 import simplejson as json
